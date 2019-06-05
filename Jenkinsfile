@@ -18,9 +18,9 @@ pipeline {
         }
 
         
-        stage('Test') {
+        stage('Pre-analyze') {
             steps {
-                echo 'Testing..'
+                sh 'cd hypertime-fontend && npm run preanalyze && cd ..'
             }
         }
         stage('Deploy') {
