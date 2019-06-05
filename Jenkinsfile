@@ -6,13 +6,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'npm install'
+                sh 'cd hypertime-frontend && npm install && cd ..'
+                sh 'cd hypertime-e2e && npm install && cd ..'
             }
         }
 
         stage('Build Production Files') {
             steps {
-                sh 'npm run build'
+                sh 'cd hypertime-frontend && npm run build && cd ..'
             }
         }
 
