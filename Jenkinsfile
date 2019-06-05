@@ -23,6 +23,13 @@ pipeline {
                 sh 'cd hypertime-frontend && npm run preanalyze && cd ..'
             }
         }
+
+        stage('Test 4 Reelz') {
+            steps {
+                sh 'cd hypertime-frontend && npm run test && cd ..'
+            }
+        }
+
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
