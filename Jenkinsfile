@@ -20,7 +20,7 @@ pipeline {
         
         stage('Pre-analyze') {
             steps {
-                sh 'cd hypertime-fontend && npm run preanalyze && cd ..'
+                sh 'cd hypertime-frontend && npm run preanalyze && cd ..'
             }
         }
         stage('Deploy') {
