@@ -17,6 +17,11 @@ pipeline {
             }
         }
 
+        stage('Get Workspace') {
+            steps {
+                sh 'echo \“${env.WORKSPACE}\“/hypertime-frontend/build'
+            }
+        }
         
         stage('Pre-analyze') {
             steps {
