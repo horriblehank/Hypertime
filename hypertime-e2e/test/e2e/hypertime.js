@@ -3,7 +3,7 @@ const ENTER = "\uE007"
 module.exports = { // adapted from: https://git.io/vodU0
   'Guinea Pig Assert Title': function(browser) {
     browser
-      .url('http://henriklofqvist.com/ajax')
+      .url('https://hypertimehenrik.z16.web.core.windows.net/')
       .waitForElementVisible('body')
       .assert.title('Stanley Cup winners')
       //.setValue("#username", "horriblehank")
